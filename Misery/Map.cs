@@ -12,6 +12,8 @@ namespace Misery
     {
         private List<CollisionTiles> collisionTiles = new List<CollisionTiles>();
 
+        public int currentTile;
+
         public List<CollisionTiles> CollisionTiles
         {
             get { return collisionTiles; }
@@ -46,6 +48,33 @@ namespace Misery
                     width = (x + 1) * size;
                     height = (y + 1) * size;
                 }
+            }
+        }
+
+        public void MapStory(int Tile)
+        {
+            if (Tile == 0)
+            {
+
+                Generate(new int[,] {
+            {2,2,2,2,2,2,2,0},
+            {1,1,1,1,2,1,1,0},
+            {1,1,1,1,2,1,1,1},
+            {2,2,2,2,2,1,1,2},
+            {1,1,1,1,2,1,1,2}, }, 64);
+
+            }
+
+            if (Tile == 1)
+            {
+
+                Generate(new int[,] {
+            {2,1,1,1,1,1,1,0},
+            {1,1,1,1,2,1,1,0},
+            {1,1,1,1,2,1,1,1},
+            {2,2,2,2,2,1,1,2},
+            {1,1,1,1,2,1,1,2}, }, 64);
+
             }
         }
 

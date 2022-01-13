@@ -32,13 +32,7 @@ namespace Misery
 
             Tiles.Content = Content;
 
-            map.Generate(new int[,] {
-            {0,0,0,0,0,0,0},
-            {1,1,1,1,2,1,1},
-            {1,1,1,1,2,1,1},
-            {2,2,2,2,2,1,1},
-            {1,1,1,1,2,1,1}, }, 64);
-
+            map.MapStory(0);
 
             // TODO: use this.Content to load your game content here
         }
